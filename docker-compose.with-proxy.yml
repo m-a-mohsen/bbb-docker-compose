@@ -351,7 +351,7 @@ services:
       - "traefik.http.services.bbb.loadbalancer.server.port=80"
     networks:
       - bbb-net
-      - traefik-public
+      - traefik
 
 networks:
   bbb-net:
@@ -359,5 +359,5 @@ networks:
       driver: default
       config:
       - subnet: 10.7.7.0/24
-  traefik-public:
+  traefik:
     external: true
